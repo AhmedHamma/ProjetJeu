@@ -20,19 +20,27 @@ public class menu {
             Integer choixPerso = menu.nextInt();
             if (choixPerso.equals(1)) {
                 String NomDuPerso = menu.next();
-                Guerrier guerrier = new Guerrier();
-                guerrier.setNom(NomDuPerso);
+                Guerrier guerrier = new Guerrier(NomDuPerso);
+//                guerrier.setNom(NomDuPerso);
                 System.out.println(guerrier.getNom()); // instancier l'objet de la classe guerrier
                 System.out.println("Voilà ton guerrier  :" + guerrier.getNom() + ", ses pdv sont de : " + guerrier.getVie() + " avec une Hache ses dgt sont de :" + guerrier.getDegats() + " hf !");
-                startGame();
+                try {
+                    startGame();
+                } catch (PersonnageHorsPlateauException e) {
+                    System.out.println(e.getMessage());
+                }
             }
             if (choixPerso.equals(2)) {
                 String NomDuPerso = menu.next();
-                Mage mage = new Mage();
-                mage.setNom(NomDuPerso);
+                Mage mage = new Mage(NomDuPerso);
+//                mage.setNom(NomDuPerso);
                 System.out.println(mage.getNom());
                 System.out.println("Voilà ton mage :" + mage.getNom() + ", ses pdv sont de : " + mage.getVie() + " avec un Baton ses dgt sont de :" + mage.getDegats() + " hf !");
-                startGame();
+                try {
+                    startGame();
+                } catch (PersonnageHorsPlateauException e) {
+                    System.out.println(e.getMessage());/*e.printStackTrace();*/ // e.getMessage(); car on extend throwable
+                }
             }
         }
         if (Input.equals(2)) {
@@ -42,7 +50,7 @@ public class menu {
 
     }
 
-    public static void startGame() {
+    public static void startGame() throws PersonnageHorsPlateauException {
         boolean keepPlaying = false;
         int nbrDeCases = 64;
         int currentCase;
@@ -51,13 +59,15 @@ public class menu {
         do {
             currentCase = 1;
 
-            while (currentCase < 64) {
+            while (currentCase < nbrDeCases) {
                 diceResult = diceRoll();
                 System.out.println("prrrrrrrrrrr tadaa: " + diceResult);
 
-                if (currentCase + diceResult > 64) {
-                    System.out.println("trop loin bg.. aventurier !");
-                    currentCase = 64;
+                if (currentCase + diceResult > nbrDeCases) {
+                    throw new PersonnageHorsPlateauException();
+//                    System.out.println("trop loin bg.. aventurier !");
+//                    currentCase = 64;
+
 
                 } else {
                     currentCase += diceResult;
