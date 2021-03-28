@@ -20,7 +20,18 @@ public class Mage extends Personnage {
 //        this.degats = this.getRandomInt(5, 10);
     }
 
-//    public Mage(String nom) {
+    @Override
+    public String toString() {
+        return "Mage{" +
+                "image='" + image + '\'' +
+                ", Philtre='" + Philtre + '\'' +
+                ", Spell='" + Spell + '\'' +
+                ", nom='" + nom + '\'' +
+                ", vie=" + vie +
+                ", degats=" + degats +
+                '}';
+    }
+    //    public Mage(String nom) {
 //        this.nom = nom;
 //    }
 //

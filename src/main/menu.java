@@ -57,7 +57,7 @@ public class menu {
         int diceResult;
 
         do {
-            currentCase = 1;
+            currentCase = 1; // ranger ça dans le plateau
 
             while (currentCase < nbrDeCases) {
                 diceResult = diceRoll();

@@ -23,7 +23,18 @@ public class Guerrier extends Personnage {
 
     }
 
-//    public Guerrier(String nom) {
+    @Override
+    public String toString() { // pour afficher c'est print objet.toString
+        return "Guerrier{" +
+                "image='" + image + '\'' +
+                ", weapon='" + weapon + '\'' +
+                ", shield='" + shield + '\'' +
+                ", nom='" + nom + '\'' +
+                ", vie=" + vie +
+                ", degats=" + degats +
+                '}';
+    }
+    //    public Guerrier(String nom) {
 //        this.nom = nom;
 //    }
 //
