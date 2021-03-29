@@ -1,12 +1,9 @@
-package main;
-
-import java.util.ArrayList;
-import java.util.List;
+package fr.ahmed.main;
 
 public class Game {
 
-        List<Personnage> personnages = new ArrayList<>();
-        List<Case>
+//        List<Personnage> personnages = new ArrayList<>();
+//        List<Case>
 
 //    // attribut
 //    private ArrayList<Integer> game;

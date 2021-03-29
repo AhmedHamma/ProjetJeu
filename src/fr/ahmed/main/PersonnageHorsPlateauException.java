@@ -1,4 +1,4 @@
-package main;
+package fr.ahmed.main;
 
 public class PersonnageHorsPlateauException extends Throwable {
     public PersonnageHorsPlateauException() {

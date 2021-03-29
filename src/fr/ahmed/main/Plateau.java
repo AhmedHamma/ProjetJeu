@@ -1,16 +1,4 @@
-package main;
-
-import java.util.*;
-import java.util.ArrayList;
-import java.util.List;
-
-
-
-
-
-
-
-
+package fr.ahmed.main;
 
 
 //    // attributs
