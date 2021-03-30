@@ -13,14 +13,17 @@ public class Hammer extends Bonus{
 
     @Override
     public String toString() {
-        return "t'as trouvé un Marteau bg !";
+
+        return "t'as trouvé un Marteau bg !" +
+       "t'es dégats sont de" + this.Degats;
     }
 
-    public void interact(Personnage perso){
-        if(perso.isWeaponUser()){
-            System.out.println("T'es assez balèze pour prendre ça bg !");
-        }else{
-            System.out.println("oulaa avec ces pti bras?");
-        }
-    }
+//    public void interact(Personnage perso){
+//        if(perso.isWeaponUser()){
+//            System.out.println("T'es assez balèze pour prendre ça bg !");
+//
+//        }else{
+//            System.out.println("oulaa avec ces pti bras?");
+//        }
+//    }
 }

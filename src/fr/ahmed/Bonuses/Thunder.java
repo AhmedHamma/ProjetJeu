@@ -12,11 +12,11 @@ public class Thunder extends Bonus{
         return super.toString();
     }
 
-    public void interact(Personnage perso){
-        if(perso.isMagicUser()){
-            System.out.println("T'es assez puissant pour prendre ça bg !");
-        }else{
-            System.out.println("oulaa avec ce pti cerveau ?");
-        }
-    }
+//    public void interact(Personnage perso){
+//        if(perso.isMagicUser()){
+//            System.out.println("T'es assez puissant pour prendre ça bg !");
+//        }else{
+//            System.out.println("oulaa avec ce pti cerveau ?");
+//        }
+//    }
 }

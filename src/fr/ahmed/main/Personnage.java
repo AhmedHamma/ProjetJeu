@@ -18,6 +18,8 @@ public abstract class Personnage {
         this.degats = degats;
     }
 
+
+
     public static int getRandomInt(int Min, int Max) {
         return Min + (int) (Math.random() * ((Max - Min) + 1));
     }
@@ -62,5 +64,5 @@ public abstract class Personnage {
         this.weaponUser = weaponUser;
     }
 
-//    public abstract void updateDegats(Bonus bonus);
+
 }
