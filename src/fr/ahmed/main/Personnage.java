@@ -1,11 +1,15 @@
 package fr.ahmed.main;
 
+import fr.ahmed.Bonuses.Bonus;
+
 public abstract class Personnage {
 
     protected String nom;
     protected int vie;
     protected int degats;
-
+// 2 variable cancarry magic and weapons par defaut false
+    protected boolean magicUser = false;
+    protected boolean weaponUser = false;
     // constructeur
 
     public Personnage(String nom, int vie, int degats) {
@@ -42,5 +46,21 @@ public abstract class Personnage {
         this.degats = degats;
     }
 
+    public boolean isMagicUser() {
+        return magicUser;
+    }
 
+    public void setMagicUser(boolean magicUser) {
+        this.magicUser = magicUser;
+    }
+
+    public boolean isWeaponUser() {
+        return weaponUser;
+    }
+
+    public void setWeaponUser(boolean weaponUser) {
+        this.weaponUser = weaponUser;
+    }
+
+//    public abstract void updateDegats(Bonus bonus);
 }

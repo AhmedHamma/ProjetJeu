@@ -22,6 +22,10 @@ public class Case {
                 "nom='" + nom + '\'' +
                 '}';
     }
-
+    public void interaction(Personnage perso){
+        System.out.println("---------------------------------------" +
+                "\n du loot bg ! c'est à toi (press enter) !"
+                + "\n---------------------------------------");
+    }
 
 }

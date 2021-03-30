@@ -2,8 +2,8 @@ package fr.ahmed.main;
 
 import java.util.Scanner;
 
-public class menu {
-
+public class Menu {
+public static Personnage perso;  // pour stocker création d'un nouveau perso
     public static void main(String args[]) {
 
 
@@ -19,10 +19,10 @@ public class menu {
             Integer choixPerso = menu.nextInt();
             if (choixPerso.equals(1)) {
                 String NomDuPerso = menu.next();
-                Guerrier guerrier = new Guerrier(NomDuPerso);
+                perso = new Guerrier(NomDuPerso);
 //                guerrier.setNom(NomDuPerso);
-                System.out.println(guerrier.getNom()); // instancier l'objet de la classe guerrier
-                System.out.println("Voilà ton guerrier  :" + guerrier.getNom() + ", ses pdv sont de : " + guerrier.getVie() + " avec une Hache ses dgt sont de :" + guerrier.getDegats() + " hf !");
+                System.out.println(perso.getNom()); // instancier l'objet de la classe guerrier
+                System.out.println("Voilà ton guerrier  :" + perso.getNom() + ", ses pdv sont de : " + perso.getVie() + " avec une Hache ses dgt sont de :" + perso.getDegats() + " hf !");
                 try {
                     Board board = new Board();
                     board.fillBoard();
@@ -33,10 +33,11 @@ public class menu {
             }
             if (choixPerso.equals(2)) {
                 String NomDuPerso = menu.next();
-                Mage mage = new Mage(NomDuPerso);
+                perso = new Mage(NomDuPerso);
 //                mage.setNom(NomDuPerso);
-                System.out.println(mage.getNom());
-                System.out.println("Voilà ton mage :" + mage.getNom() + ", ses pdv sont de : " + mage.getVie() + " avec un Baton ses dgt sont de :" + mage.getDegats() + " hf !");
+                System.out.println(perso.getNom());
+
+                System.out.println("Voilà ton mage :" + perso.getNom() + ", ses pdv sont de : " + perso.getVie() + " avec un Baton ses dgt sont de :" + perso.getDegats() + " hf !");
                 try {
                     Board board = new Board();
                     board.fillBoard();
