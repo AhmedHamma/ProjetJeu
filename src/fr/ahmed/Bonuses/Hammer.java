@@ -13,7 +13,7 @@ public class Hammer extends Bonus{
 
     @Override
     public String toString() {
-        return super.toString();
+        return "t'as trouvé un Marteau bg !";
     }
 
     public void interact(Personnage perso){

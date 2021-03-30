@@ -13,7 +13,7 @@ public class Fireball extends Bonus{
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Une boule de feu bg !";
     }
 
     public void interact(Personnage perso){

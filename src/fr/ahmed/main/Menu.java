@@ -3,7 +3,8 @@ package fr.ahmed.main;
 import java.util.Scanner;
 
 public class Menu {
-public static Personnage perso;  // pour stocker création d'un nouveau perso
+    public static Personnage perso;  // pour stocker création d'un nouveau perso
+
     public static void main(String args[]) {
 
 
