@@ -1,6 +1,8 @@
-package fr.ahmed.Bonuses;
+package fr.ahmed.Bonuses.Heal;
 
-public class SuperPotion extends Soin{
+import fr.ahmed.Bonuses.Heal.Soin;
+
+public class SuperPotion extends Soin {
     public SuperPotion(String nom, int healing) {
         super(nom, healing);
     }

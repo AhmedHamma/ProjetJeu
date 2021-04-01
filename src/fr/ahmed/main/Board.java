@@ -1,6 +1,13 @@
 package fr.ahmed.main;
 
-import fr.ahmed.Bonuses.*;
+import fr.ahmed.Bonuses.Heal.LittlePotion;
+import fr.ahmed.Bonuses.Heal.SuperPotion;
+import fr.ahmed.Bonuses.Spells.Fireball;
+import fr.ahmed.Bonuses.Spells.Spell;
+import fr.ahmed.Bonuses.Spells.Thunder;
+import fr.ahmed.Bonuses.Weapons.Hammer;
+import fr.ahmed.Bonuses.Weapons.Sword;
+import fr.ahmed.Bonuses.Weapons.Weapon;
 import fr.ahmed.Enemies.Dragon;
 import fr.ahmed.Enemies.Goblin;
 import fr.ahmed.Enemies.Witcher;
@@ -18,7 +25,7 @@ public class Board {
 
     }
 
-    public void startGame() throws PersonnageHorsPlateauException {
+    public void startGame(Personnage perso) throws PersonnageHorsPlateauException {
         boolean keepPlaying = false;
         int nbrDeCases = 64;
 //        int currentCase;
@@ -40,9 +47,14 @@ public class Board {
                 } else {
                     currentCase += diceResult;
                     Case ccase = board.get(currentCase); // pour afficher le bonus de la case
-                    if(ccase instanceof Bonus){
-                        Bonus bonus = (Bonus) ccase;
-                        bonus.interact(Menu.perso);
+                    if(ccase instanceof Spell){
+                        Spell spell = (Spell) ccase;
+                        spell.interact(perso);
+
+                    }else if (ccase instanceof Weapon){
+                        Weapon weapon = (Weapon) ccase;
+                        weapon.interact(perso);
+
                     }
                 }
 
@@ -69,7 +81,7 @@ public class Board {
                 board.add(new Witcher("Henry", 6, 3));
             } else if (i == 48 || i == 49 ) {
                 board.add(new Fireball());
-            } else if ((i == 2) || (i == 11) || (i == 5) || (i == 22) || (i == 28)) {
+            } else if ((i == 2) || (i == 11) || (i == 5) || (i == 22) || (i == 29)) {
                 board.add(new Hammer());
             } else if ((i == 1) || (i == 4) || (i == 8) || (i == 17) || (i == 23)) {
                 board.add(new Thunder("Thunder", 9));

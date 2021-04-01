@@ -1,6 +1,6 @@
-package fr.ahmed.Bonuses;
+package fr.ahmed.Bonuses.Heal;
 
-public class LittlePotion extends Soin{
+public class LittlePotion extends Soin {
     public LittlePotion(String nom, int healing) {
         super(nom, healing);
     }

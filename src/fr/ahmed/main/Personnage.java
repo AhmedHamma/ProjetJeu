@@ -18,6 +18,9 @@ public abstract class Personnage {
         this.degats = degats;
     }
 
+    public Personnage() {
+
+    }
 
 
     public static int getRandomInt(int Min, int Max) {

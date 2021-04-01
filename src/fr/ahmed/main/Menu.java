@@ -21,13 +21,14 @@ public class Menu {
             if (choixPerso.equals(1)) {
                 String NomDuPerso = menu.next();
                 perso = new Guerrier(NomDuPerso);
+
 //                guerrier.setNom(NomDuPerso);
                 System.out.println(perso.getNom()); // instancier l'objet de la classe guerrier
                 System.out.println("Voilà ton guerrier  :" + perso.getNom() + ", ses pdv sont de : " + perso.getVie() + " avec une Hache ses dgt sont de :" + perso.getDegats() + " hf !");
                 try {
                     Board board = new Board();
                     board.fillBoard();
-                    board.startGame();
+                    board.startGame(perso);
                 } catch (PersonnageHorsPlateauException e) {
                     System.out.println(e.getMessage());
                 }
@@ -42,7 +43,7 @@ public class Menu {
                 try {
                     Board board = new Board();
                     board.fillBoard();
-                    board.startGame();
+                    board.startGame(perso);
                 } catch (PersonnageHorsPlateauException e) {
                     System.out.println(e.getMessage());/*e.printStackTrace();*/ // e.getMessage(); car on extend throwable
                 }

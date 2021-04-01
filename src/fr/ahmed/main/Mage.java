@@ -13,7 +13,8 @@ public class Mage extends Personnage {
 
     public Mage(String nom) {
         super(nom, Personnage.getRandomInt(3,6), Personnage.getRandomInt(8,15));
-
+        this.setMagicUser(true);
+        this.setWeaponUser(false);
 
 //        this.nom = this.getNom();
 //        this.vie = this.getRandomInt(5, 10);
